@@ -5,13 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>ru.bellintegrator</groupId>
-    <artifactId>orgstruct</artifactId>
-    <version>0.0.1</version>
-    <packaging>jar</packaging>
+    <groupId>ru.bellintegrator</groupId><!-- Наименование организации -->
+    <artifactId>orgstruct</artifactId><!-- Название проекта -->
+    <version>0.0.1</version><!-- Версия -->
+    <packaging>jar</packaging><!-- Какой будет результат сборки -->
 
-    <name>OrgStruct</name>
+    <name>OrgStruct</name><!-- название проекта для человека -->
+    <description>Обучающий проект, практика</description> <!-- Описание проекта -->
+    <url>https://github.com/ProgBiba/Bell_OrganizationStructure</url> <!-- сайт проекта -->
 
+    <!-- Обьявляем переменные, для дальнейшего их использования, чтобы не дублировать и менять в одном месте -->
     <properties>
         <java.version>1.8</java.version>
         <encoding>UTF-8</encoding>
@@ -20,6 +23,7 @@
     </properties>
 
     <!-- Задаёт версии зависимостей с помощью <dependencyManagement>. Позволяет избежать конфликта версий -->
+    <!-- Так понимаю наследуемся от других настроек чтобы не заморачиваться с версиями -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -33,7 +37,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
-                <exclusion>
+                <exclusion><!-- Исключаем Томкэт -->
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                 </exclusion>
@@ -56,8 +60,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
